@@ -5,8 +5,9 @@ import sqlite3 as sq
 import datetime as dt
 import threading
 import time
-ACCOUNT_SID = "AC01ba2d70ed0aa5f87b9199a5b3652954"
-AUTH_TOKEN = "be26603df2e98420187771f1f8caf9e5"
+import os
+ACCOUNT_SID = os.environ.get("AC01ba2d70ed0aa5f87b9199a5b3652954")
+AUTH_TOKEN = os.environ.get( "be26603df2e98420187771f1f8caf9e5")
 FROM_NUMBER = "whatsapp:+14155238886"
 client = Client(ACCOUNT_SID, AUTH_TOKEN)
 
